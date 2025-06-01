@@ -1,3 +1,4 @@
+/* frontend/src/index.css */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +6,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Define CSS variables for default (light) theme */
+  --text-color: #333;
+  --background-color: #fff; /* Default light theme background */
+  --card-background-color: #fff;
+  --border-color: #f0f0f0;
+  --primary-color: #00A78E;
+
+  /* --- THIS IS VERY IMPORTANT --- */
+  /* Explicitly use the CSS variables for body background and text color */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  /* --- END --- */
+}
+
+body[data-theme="dark"] {
+  /* Override CSS variables for dark theme */
+  --text-color: rgba(255, 255, 255, 0.85);
+  --background-color: #141414; /* Main body background for dark mode */
+  --card-background-color: #1f1f1f;
+  --border-color: #303030;
+  --primary-color: #00C2A2;
 }
 
 code {
