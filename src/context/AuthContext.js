@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     isLoading: true,
   });
 
-  const API_URL = 'im-backend-dvg3fybah4dkb8c4.japanwest-01.azurewebsites.net/api';
+  const API_URL = 'https://im-backend-dvg3fybah4dkb8c4.japanwest-01.azurewebsites.net/api';
   // console.log('AuthProvider: Initializing/Re-rendering. isLoading:', authState.isLoading);
 
   const setAuthToken = (token) => {
